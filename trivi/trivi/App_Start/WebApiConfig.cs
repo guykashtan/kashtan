@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
 
-namespace trivia
+namespace trivi
 {
     public static class WebApiConfig
     {
