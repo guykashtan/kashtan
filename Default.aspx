@@ -59,7 +59,7 @@
             <div id="answersHeadline">בחר בתשובה הנכונה</div>
         </div>
         <div class="templates" style="display:none">
-            <div class="answer"></div>
+            <div class="answerContainer"><span class="answer"></span><br /></div>
         </div>
     </div> <!-- /container -->
 

@@ -9,6 +9,14 @@ body {
 .answer {
     cursor:pointer;
     margin-top:3px;
+    display:inline-block;
+}
+.correctAnswer {
+    background-color:rgb(124, 255, 124);
+}
+
+.wrongAnswer {
+    background-color:rgb(245, 101, 101);
 }
 
 #answers {
