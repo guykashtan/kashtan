@@ -5,11 +5,11 @@ $(function () {
 function randomQuestion() {
     $.ajax({
         type: "POST",
+        cache: false,
         url: "Default.aspx/GetRandomQuestion",
         data: "{}",
         contentType: "application/json; charset=utf-8",
         dataType: "json",
-        cache : false,
         success: function (msg) {
             showQuestion(JSON.parse(msg.d));
         }
