@@ -1,0 +1,27 @@
+body {
+    padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+}
+#question {
+    direction: rtl;
+    font-size:20px;
+    line-height:23px;
+}
+.answer {
+    cursor:pointer;
+    margin-top:3px;
+}
+
+#answers {
+    direction: rtl;
+    font-size:16pt;
+    
+}
+#answersHeadline {
+    margin-top:15px;
+    font-size: 22px;
+    font-weight: bold;
+}
+#questionHeadline{
+    font-size: 22px;
+    font-weight: bold;
+}
