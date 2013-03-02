@@ -80,7 +80,9 @@
         <div id="answers" class="span12">
             <div id="answersHeadline">בחר בתשובה הנכונה</div>
         </div>
-
+        <div class="templates" style="display:none">
+            <div class="answer"></div>
+        </div>
     </div> <!-- /container -->
 
     <!-- Le javascript

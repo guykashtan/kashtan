@@ -6,9 +6,10 @@ using System.Text;
     {
         public string question { set; get; }
         public string[] possibleAnswers;
-
-        public Question(string question, string[] possibleAnswers)
+        public int id;
+        public Question(int id, string question, string[] possibleAnswers)
         {
+            this.id = id;
             this.question = question;
             reshuffle(possibleAnswers);
             this.possibleAnswers = possibleAnswers;
