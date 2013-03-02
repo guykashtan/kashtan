@@ -1,21 +1,4 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    
-    <div>
-     HI: D
-    </div>
-    
-</body>
-</html>
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -90,8 +73,6 @@
     <div class="container">
 
       <h1>Trivipedia</h1>
-      <p>Use this document as a way to quick start any new project.<br> All you get is this message and a barebones HTML document.</p>
-
         <div id="question" class="span12">
             <div id="questionHeadline">שאלה:</div>
         </div>
