@@ -9,6 +9,7 @@ function randomQuestion() {
         data: "{}",
         contentType: "application/json; charset=utf-8",
         dataType: "json",
+        cache : "false",
         success: function (msg) {
             showQuestion(JSON.parse(msg.d));
         }
