@@ -1,4 +1,8 @@
 $(function () {
+    randomQuestion();
+});
+
+function randomQuestion() {
     $.ajax({
         type: "POST",
         url: "Default.aspx/GetRandomQuestion",
@@ -9,17 +13,17 @@ $(function () {
             showQuestion(JSON.parse(msg.d));
         }
     });
-
-});
+}
 
 function showQuestion(question) {
-    $("#question").append(question.question);
+    $("#questionContainer").text(question.question);
     var i = 1;
+    $("#answersContainer").text("");
     for (answer in question.possibleAnswers) {
         var clone = $(".templates .answerContainer").clone();
         var cloneSpanAnswer = clone.find(".answer");
         cloneSpanAnswer.text(i + ". " + question.possibleAnswers[answer]);
-        $("#answers").append(clone);
+        $("#answersContainer").append(clone);
         var eventData = { id: question.id, answer: question.possibleAnswers[answer], answerSpan: cloneSpanAnswer};
         clone.click(eventData, answerClickFunction);
         i++;
@@ -47,7 +51,7 @@ function answerQuestion(questionId, answer, answerSpan) {
             else {
                 answerSpan.addClass("wrongAnswer");
             }
-
+            setTimeout(randomQuestion, 1500);
         }
     });
 }

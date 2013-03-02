@@ -53,10 +53,12 @@
       <h1>Trivipedia</h1>
         <div id="question" class="span12">
             <div id="questionHeadline">שאלה:</div>
+            <div id="questionContainer"></div>
         </div>
         
         <div id="answers" class="span12">
             <div id="answersHeadline">בחר בתשובה הנכונה</div>
+            <div id="answersContainer"></div>
         </div>
         <div class="templates" style="display:none">
             <div class="answerContainer"><span class="answer"></span><br /></div>
