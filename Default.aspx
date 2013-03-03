@@ -10,6 +10,11 @@
 
     <!-- Le styles -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    </style>
     <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
     <link href="assets/css/main.css" rel="stylesheet">
 
@@ -27,7 +32,6 @@
   </head>
 
   <body>
-      <form id="form1" runat="server">
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
@@ -36,7 +40,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="#"><%--Project's home--%></a>
+          <a class="brand" href="#">Trivipedia</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="active"><a href="#">Home</a></li>
@@ -84,5 +88,4 @@
     <script src="/assets/js/bootstrap-typeahead.js"></script>--%>
 
   </body>
-    </form>
 </html>
