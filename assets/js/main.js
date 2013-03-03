@@ -56,3 +56,12 @@ function answerQuestion(questionId, answer, answerSpan) {
         }
     });
 }
+
+
+
+
+/** SET-UP **/
+$.ajaxSetup({
+    type: 'POST',
+    headers: { "cache-control": "no-cache" }
+});
