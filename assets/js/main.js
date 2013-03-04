@@ -25,7 +25,6 @@ function showQuestion(question) {
         console.log(button);
         button.text(question.possibleAnswers[answer]);
         var eventData = { id: question.id, answer: question.possibleAnswers[answer], answerButton: button };
-        button.unbind();
         button.click(eventData, answerClickFunction);
         i++;
         button.removeClass("wrongButton");
@@ -34,7 +33,9 @@ function showQuestion(question) {
 }
 
 function answerClickFunction(event) {
-    playSound("assets/sounds/button.mp3");
+
+    $(".optionButtons").unbind();
+    playButtonSound();
     answerQuestion(event.data.id, event.data.answer, event.data.answerButton);
 }
 
@@ -61,10 +62,8 @@ function answerQuestion(questionId, answer, answerSpan) {
 }
 
 
-function playSound(sound) {
-    var audioElement = document.createElement('audio');
-    audioElement.setAttribute('src', sound);
-    audioElement.play();
+function playButtonSound() {
+    $(".buttonClickPlayer")[0].play();
 }
 
 /** SET-UP **/

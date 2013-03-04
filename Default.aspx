@@ -66,7 +66,7 @@
         </div>
         <div class="templates" style="display:none">
             <div class="answerContainer"><span class="answer"></span><br /></div>
-            <embed class="buttonClickPlayer" height="50" autoplay="autoplay" width="100" src="assets/sounds/button.mp3">
+            <audio class="buttonClickPlayer" src="assets/sounds/button.mp3">
         </div>
 
         <div class="span12">
