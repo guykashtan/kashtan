@@ -21,18 +21,21 @@ function showQuestion(question) {
     var i = 1;
     $("#answersContainer").text("");
     for (answer in question.possibleAnswers) {
-        var clone = $(".templates .answerContainer").clone();
-        var cloneSpanAnswer = clone.find(".answer");
-        cloneSpanAnswer.text(i + ". " + question.possibleAnswers[answer]);
-        $("#answersContainer").append(clone);
-        var eventData = { id: question.id, answer: question.possibleAnswers[answer], answerSpan: cloneSpanAnswer};
-        clone.click(eventData, answerClickFunction);
+        var button = $(".option" + i);
+        console.log(button);
+        button.text(question.possibleAnswers[answer]);
+        var eventData = { id: question.id, answer: question.possibleAnswers[answer], answerButton: button };
+        button.unbind();
+        button.click(eventData, answerClickFunction);
         i++;
+        button.removeClass("wrongButton");
+        button.removeClass("correctButton");
     }
 }
 
 function answerClickFunction(event) {
-    answerQuestion(event.data.id, event.data.answer, event.data.answerSpan);
+    playSound("assets/sounds/button.mp3");
+    answerQuestion(event.data.id, event.data.answer, event.data.answerButton);
 }
 
 function answerQuestion(questionId, answer, answerSpan) {
@@ -47,10 +50,10 @@ function answerQuestion(questionId, answer, answerSpan) {
         dataType: "json",
         success: function (msg) {
             if (msg.d == "True") {
-                answerSpan.addClass("correctAnswer");
+                answerSpan.addClass("correctButton");
             }
             else {
-                answerSpan.addClass("wrongAnswer");
+                answerSpan.addClass("wrongButton");
             }
             setTimeout(randomQuestion, 1500);
         }
@@ -58,7 +61,11 @@ function answerQuestion(questionId, answer, answerSpan) {
 }
 
 
-
+function playSound(sound) {
+    var audioElement = document.createElement('audio');
+    audioElement.setAttribute('src', sound);
+    audioElement.play();
+}
 
 /** SET-UP **/
 $.ajaxSetup({

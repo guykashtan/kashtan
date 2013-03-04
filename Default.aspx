@@ -40,7 +40,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="#">Trivipedia</a>
+          <a class="brand" href="#"><%--Trivipedia--%></a>
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="active"><a href="#">Home</a></li>
@@ -61,11 +61,23 @@
         </div>
         
         <div id="answers" class="span12">
-            <div id="answersHeadline">בחר בתשובה הנכונה</div>
+            <div id="answersHeadline">בחר בתשובה הנכונה:</div>
             <div id="answersContainer"></div>
         </div>
         <div class="templates" style="display:none">
             <div class="answerContainer"><span class="answer"></span><br /></div>
+            <embed class="buttonClickPlayer" height="50" autoplay="autoplay" width="100" src="assets/sounds/button.mp3">
+        </div>
+
+        <div class="span12">
+            <p>
+                <button class="option1 optionButtons span5 btn btn-large btn-primary" type="button"></button>
+                <button class="option2 optionButtons span5 btn btn-large btn-primary" type="button"></button>
+            </p>
+            <p>
+                <button class="option3 optionButtons span5 btn btn-large btn-primary" type="button"></button>
+                <button class="option4 optionButtons span5 btn btn-large btn-primary" type="button"></button>
+            </p>
         </div>
     </div> <!-- /container -->
 
@@ -74,7 +86,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/main.js"></script>
-<%--    <script src="assets/js/bootstrap-transition.js"></script>
+    <script src="assets/js/bootstrap-transition.js"></script>
     <script src="assets/js/bootstrap-alert.js"></script>
     <script src="assets/js/bootstrap-modal.js"></script>
     <script src="assets/js/bootstrap-dropdown.js"></script>
@@ -85,7 +97,7 @@
     <script src="assets/js/bootstrap-button.js"></script>
     <script src="assets/js/bootstrap-collapse.js"></script>
     <script src="assets/js/bootstrap-carousel.js"></script>
-    <script src="/assets/js/bootstrap-typeahead.js"></script>--%>
+    <script src="/assets/js/bootstrap-typeahead.js"></script>
 
   </body>
 </html>
