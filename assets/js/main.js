@@ -52,6 +52,7 @@ function answerQuestion(questionId, answer, answerSpan) {
         success: function (msg) {
             if (msg.d == "True") {
                 answerSpan.addClass("correctButton");
+                playCoinSound();
             }
             else {
                 answerSpan.addClass("wrongButton");
@@ -65,6 +66,11 @@ function answerQuestion(questionId, answer, answerSpan) {
 function playButtonSound() {
     $(".buttonClickPlayer")[0].play();
 }
+
+function playCoinSound() {
+    $(".coinSound")[0].play();
+}
+
 
 /** SET-UP **/
 $.ajaxSetup({

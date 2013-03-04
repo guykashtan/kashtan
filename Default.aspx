@@ -66,7 +66,10 @@
         </div>
         <div class="templates" style="display:none">
             <div class="answerContainer"><span class="answer"></span><br /></div>
+            <%-- attribute here... http://www.freesound.org/people/junggle/sounds/26777/ --%>
             <audio class="buttonClickPlayer" src="assets/sounds/button.mp3">
+            <%-- attribute here... http://www.freesound.org/people/morgantj/sounds/59593// --%>
+            <audio class="coinSound" src="assets/sounds/59593__morgantj__coin.mp3">
         </div>
 
         <div class="span12">
