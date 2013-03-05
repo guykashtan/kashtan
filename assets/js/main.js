@@ -42,9 +42,9 @@ function answerQuestion(questionId, answer, answerSpan, correctAnswer) {
     console.log("trying to answer with answer " + answer);
     if (answer == correctAnswer) {
         
-        setTimeout(function () {
-            answerSpan.addClass("correctButton");
-        }, 1);
+        
+        answerSpan.addClass("correctButton");
+        
         
         $(function () {
             playCoinSound();
@@ -52,10 +52,10 @@ function answerQuestion(questionId, answer, answerSpan, correctAnswer) {
     }
     else {
         
-        setTimeout(function () {
-            answerSpan.addClass("wrongButton");
-            $(".optionButtons:contains('" + correctAnswer + "')").addClass("correctButton");
-        }, 1);
+        
+        answerSpan.addClass("wrongButton");
+        $(".optionButtons:contains('" + correctAnswer + "')").addClass("correctButton");
+        
         $(function () {
             playButtonSound();
         });
@@ -63,26 +63,6 @@ function answerQuestion(questionId, answer, answerSpan, correctAnswer) {
 
     }
     setTimeout(randomQuestion, 1500);
-
-    //var data = { questionId: questionId, answer: answer };
-    //var stringifiedData = JSON.stringify(data);
-    //$.ajax({
-    //    type: "POST",
-    //    url: "Default.aspx/AnswerQuestion",
-    //    data: stringifiedData,
-    //    contentType: "application/json; charset=utf-8",
-    //    dataType: "json",
-    //    success: function (msg) {
-    //        if (msg.d == "True") {
-    //            answerSpan.addClass("correctButton");
-    //            playCoinSound();
-    //        }
-    //        else {
-    //            answerSpan.addClass("wrongButton");
-    //        }
-    //        setTimeout(randomQuestion, 1500);
-    //    }
-    //});
 }
 
 

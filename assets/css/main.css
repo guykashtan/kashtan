@@ -3,7 +3,7 @@ button {
 }
 #question {
     direction: rtl;
-    font-size:large;
+    font-size:larger;
     line-height:23px;
 }
 .answer {
@@ -21,26 +21,26 @@ button {
 
 #answers {
     direction: rtl;
-    font-size:medium;
+    font-size:large;
     margin-top:25px;
     
 }
 #answersHeadline {
     margin-top:15px;
-    font-size: large;
+    font-size: larger;
     font-weight: bold;
 }
 #questionHeadline{
-    font-size: large;
+    font-size: larger;
     font-weight: bold;
 }
 
 .optionButtons {
     margin-top:10px;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
 }
 
 .wrongButton {
