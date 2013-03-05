@@ -62,7 +62,7 @@ function answerQuestion(questionId, answer, answerSpan, correctAnswer) {
         
 
     }
-    setTimeout(randomQuestion, 1500);
+    setTimeout(randomQuestion, 750);
 }
 
 

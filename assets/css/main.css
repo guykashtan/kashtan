@@ -35,14 +35,6 @@ button {
     font-weight: bold;
 }
 
-.optionButtons {
-    margin-top:10px;
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    transition: all 1s ease;
-}
-
 .wrongButton {
   background-color: hsl(0, 69%, 22%) !important;
   background-repeat: repeat-x;
