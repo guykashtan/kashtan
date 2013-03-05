@@ -41,11 +41,17 @@ function answerClickFunction(event) {
 function answerQuestion(questionId, answer, answerSpan, correctAnswer) {
     console.log("trying to answer with answer " + answer);
     if (answer == correctAnswer) {
-        answerSpan.addClass("correctButton");
+        
+        setTimeout(function () {
+            answerSpan.addClass("correctButton");
+        }, 300);
         playCoinSound();
     }
     else {
-        answerSpan.addClass("wrongButton");
+        
+        setTimeout(function () {
+            answerSpan.addClass("wrongButton");
+        }, 300);
         playButtonSound();
     }
     setTimeout(randomQuestion, 1500);
