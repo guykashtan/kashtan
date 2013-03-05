@@ -24,7 +24,7 @@ function showQuestion(question) {
         var button = $(".option" + i);
         console.log(button);
         button.text(question.possibleAnswers[answer]);
-        var eventData = { id: question.id, answer: question.possibleAnswers[answer], answerButton: button };
+        var eventData = { id: question.id, answer: question.possibleAnswers[answer], answerButton: button, correctAnswer: question.correctAnswer };
         button.click(eventData, answerClickFunction);
         i++;
         button.removeClass("wrongButton");
@@ -35,31 +35,40 @@ function showQuestion(question) {
 function answerClickFunction(event) {
 
     $(".optionButtons").unbind();
-    playButtonSound();
-    answerQuestion(event.data.id, event.data.answer, event.data.answerButton);
+    answerQuestion(event.data.id, event.data.answer, event.data.answerButton, event.data.correctAnswer);
 }
 
-function answerQuestion(questionId, answer, answerSpan) {
+function answerQuestion(questionId, answer, answerSpan, correctAnswer) {
     console.log("trying to answer with answer " + answer);
-    var data = { questionId: questionId, answer: answer };
-    var stringifiedData = JSON.stringify(data);
-    $.ajax({
-        type: "POST",
-        url: "Default.aspx/AnswerQuestion",
-        data: stringifiedData,
-        contentType: "application/json; charset=utf-8",
-        dataType: "json",
-        success: function (msg) {
-            if (msg.d == "True") {
-                answerSpan.addClass("correctButton");
-                playCoinSound();
-            }
-            else {
-                answerSpan.addClass("wrongButton");
-            }
-            setTimeout(randomQuestion, 1500);
-        }
-    });
+    if (answer == correctAnswer) {
+        answerSpan.addClass("correctButton");
+        playCoinSound();
+    }
+    else {
+        answerSpan.addClass("wrongButton");
+        playButtonSound();
+    }
+    setTimeout(randomQuestion, 1500);
+
+    //var data = { questionId: questionId, answer: answer };
+    //var stringifiedData = JSON.stringify(data);
+    //$.ajax({
+    //    type: "POST",
+    //    url: "Default.aspx/AnswerQuestion",
+    //    data: stringifiedData,
+    //    contentType: "application/json; charset=utf-8",
+    //    dataType: "json",
+    //    success: function (msg) {
+    //        if (msg.d == "True") {
+    //            answerSpan.addClass("correctButton");
+    //            playCoinSound();
+    //        }
+    //        else {
+    //            answerSpan.addClass("wrongButton");
+    //        }
+    //        setTimeout(randomQuestion, 1500);
+    //    }
+    //});
 }
 
 
