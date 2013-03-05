@@ -51,8 +51,10 @@ function answerQuestion(questionId, answer, answerSpan, correctAnswer) {
         
         setTimeout(function () {
             answerSpan.addClass("wrongButton");
+            $(".optionButtons:contains('" + correctAnswer + "')").addClass("correctButton");
         }, 300);
         playButtonSound();
+
     }
     setTimeout(randomQuestion, 1500);
 
