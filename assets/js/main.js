@@ -44,16 +44,22 @@ function answerQuestion(questionId, answer, answerSpan, correctAnswer) {
         
         setTimeout(function () {
             answerSpan.addClass("correctButton");
-        }, 300);
-        playCoinSound();
+        }, 1);
+        
+        $(function () {
+            playCoinSound();
+        });
     }
     else {
         
         setTimeout(function () {
             answerSpan.addClass("wrongButton");
             $(".optionButtons:contains('" + correctAnswer + "')").addClass("correctButton");
-        }, 300);
-        playButtonSound();
+        }, 1);
+        $(function () {
+            playButtonSound();
+        });
+        
 
     }
     setTimeout(randomQuestion, 1500);
